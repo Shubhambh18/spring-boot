@@ -4,6 +4,8 @@ package com.example.demo.clients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestTemplate;
 
+import com.example.demo.model.Product;
+
 public class ProductClient {
 	
 	@Autowired
@@ -17,5 +19,11 @@ public class ProductClient {
 		System.out.print(resp);
 	}
 	
+	public void addProduct(Product product) {
+		
+		Product prod = this.template.postForObject(this.url, product, Product.class);
+		System.out.println(prod);
+		
+	}
 
 }
