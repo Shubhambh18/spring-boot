@@ -5,6 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 import com.example.demo.model.Product;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+@EnableSwagger2
 @Configuration
 public class AppConfig {
 	
